@@ -1,20 +1,18 @@
 class Solution {
     public int removeDuplicates(int[] nums) {
-        int traversalArr = 0;
-        int k = 0;
+        int i = 0 ;
+        int j = 0;
         int prev = Integer.MIN_VALUE;
 
-        for(;traversalArr < nums.length; traversalArr++)
+        for(;i < nums.length; i++)
         {
-            int currentElem = nums[traversalArr];
-
-            if(currentElem != prev)
+            if(nums[i] != prev)
             {
-                nums[k] = currentElem;
-                k++;
-                prev = currentElem;
+                nums[j] = nums[i];
+                j++;
+                prev = nums[i];
             }
         }
-        return k; 
+        return j;
     }
 }
