@@ -1,15 +1,14 @@
 class Solution {
     public int[][] generateMatrix(int n) {
         int[][] arr = new int[n][n];
-        List<Integer> list = new ArrayList<>();
+        
 
-        int cols = n;
-        int rows = n;
+        
         int k = 0;
         int left = 0 ;
-        int right = cols - 1;
+        int right = n - 1;
         int up = 0;
-        int down = rows - 1;
+        int down = n - 1;
 
         int count = 0;
 
