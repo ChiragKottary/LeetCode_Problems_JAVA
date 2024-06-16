@@ -1,18 +1,17 @@
 class Solution {
     public int minPatches(int[] nums, int n) {
         int cost = 0;
-        long upper = 1;
+        long upper = 0;
         int i = 0;
-        while(upper <= n)
+        while(upper < n)
         {
-            if(i<nums.length && upper  >= nums[i]  )
+            if(i<nums.length && upper+1 >= nums[i])
             {
                 upper += nums[i];
                 i++;
-            }
-            else
+            }else
             {
-                upper += upper;
+                upper += (upper+1);
                 cost++;   
             }
         }
