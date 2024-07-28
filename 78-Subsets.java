@@ -1,7 +1,7 @@
 class Solution {
     public List<List<Integer>> ans =new ArrayList<>();
     public void helper(int[] nums , int index,List<Integer> Combi){
-        if(index == nums.length){
+        if(index == nums.length ){
             ans.add(new ArrayList<>(Combi));
             return;
         }
