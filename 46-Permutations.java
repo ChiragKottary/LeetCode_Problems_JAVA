@@ -7,7 +7,7 @@ class Solution {
     }
     public void helper(int[] nums ,int index ){
 
-        if(index == nums.length){
+        if(index == nums.length -1){
                 List<Integer> list = new ArrayList<>();
                 for(int x : nums){
                     list.add(x);
